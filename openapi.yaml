@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: 'My First API'
+  version: '0.1'
+paths:
+  /api/file:
+    get:
+      operationId: e46b8f1e70a0c96f57c9f1f95b72cda3
+      responses:
+        '200':
+          description: 'File or file with Info resource'
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - { $ref: '#/components/schemas/File' }
+                  - { $ref: '#/components/schemas/FileWithInfo' }
+components:
+  schemas:
+    File:
+      description: 'File model'
+      properties:
+        id:
+          type: integer
+        filename:
+          type: string
+      type: object
+    FileWithInfo:
+      description: 'FileWithInfo model'
+      properties:
+        info:
+          $ref: '#/components/schemas/Info'
+        file:
+          $ref: '#/components/schemas/File'
+      type: object
+    Info:
+      description: 'Info model'
+      properties:
+        canBeOpened:
+          type: boolean
+      type: object
+    Person:
+      description: 'Person model'
+      properties:
+        id:
+          type: integer
+        firstname:
+          type: string
+        lastname:
+          type: string
+      type: object
