@@ -5,7 +5,7 @@ namespace Amenophis\Model;
 use OpenApi\Annotations as OA;
 
 /**
- * @OA\Schema(description="Info model")
+ * @OA\Schema(description="Info model", required={"canBeOpened"})
  */
 class Info
 {

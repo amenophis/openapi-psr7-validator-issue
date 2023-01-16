@@ -5,7 +5,7 @@ namespace Amenophis\Model;
 use OpenApi\Annotations as OA;
 
 /**
- * @OA\Schema(description="Person model")
+ * @OA\Schema(description="Person model", required={"id", "firstname", "lastname"})
  */
 class Person
 {

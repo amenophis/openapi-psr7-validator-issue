@@ -19,6 +19,9 @@ components:
   schemas:
     File:
       description: 'File model'
+      required:
+        - id
+        - filename
       properties:
         id:
           type: integer
@@ -27,6 +30,9 @@ components:
       type: object
     FileWithInfo:
       description: 'FileWithInfo model'
+      required:
+        - info
+        - file
       properties:
         info:
           $ref: '#/components/schemas/Info'
@@ -35,12 +41,18 @@ components:
       type: object
     Info:
       description: 'Info model'
+      required:
+        - canBeOpened
       properties:
         canBeOpened:
           type: boolean
       type: object
     Person:
       description: 'Person model'
+      required:
+        - id
+        - firstname
+        - lastname
       properties:
         id:
           type: integer

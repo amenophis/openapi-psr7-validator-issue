@@ -5,7 +5,7 @@ namespace Amenophis\Model;
 use OpenApi\Annotations as OA;
 
 /**
- * @OA\Schema(description="FileWithInfo model")
+ * @OA\Schema(description="FileWithInfo model", required={"info", "file"})
  */
 class FileWithInfo
 {
